@@ -30,12 +30,43 @@ const filteredCoins = coins.filter(coin =>
   )
 
   return (
-    <div className="coin-app">
+  
+    
+
+// start
+<div className="coin-app">
+
+
+{/* header */}
+      <header className="header-style">
+        <h1 className="title-text">ClearCoin.io</h1>
+        <div className='header-btn-container'>
+          <a className='btn' href='#'>Portfolio</a>
+          <a className='btn' href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Sign In</a>
+        </div>
+      </header>
+
+
+{/* triple section */}
+
+
+
+
+{/* Main content */}
       <div className='coin-search'>
         <h1 className='coin-text'>Search a currency</h1>
         <form>
           <input type='text' placeholder='Search' className='coin-input' onChange={handleChange}></input>
         </form>
+      </div>
+
+      <div className='crypto-chart-container'>
+        <span className='crypto-chart-heading'>Name</span>
+        <span className='crypto-chart-heading'>Symbol</span>
+        <span className='crypto-chart-heading'>CAD</span>
+        <span className='crypto-chart-heading'>24hr Vol</span>
+        <span className='crypto-chart-heading'>24hr %</span>
+        <span className='crypto-chart-heading'>Market Cap</span>
       </div>
       {filteredCoins.map(coin => {
         return (

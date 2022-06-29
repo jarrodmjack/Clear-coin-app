@@ -11,11 +11,23 @@
   color: white;
 }
 
+
+/* main coin display */
+
+.crypto-chart-container {
+  width: 950px;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid red;
+  /* display: flex;
+  gap: 75px; */
+}
+
 .coin-app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 64px;
+  /* margin-top: 64px; */
   color: #fff;
 }
 
@@ -47,6 +59,68 @@
 }
 
 
+
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+/* HEADER */
+
+
+h1{
+  font-size: 24px;
+}
+
+
+.header-style{
+  height: 100px;
+  border-bottom: 2px solid gray;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 5rem;
+  border-bottom: 2px solid rgb(65, 64, 64);
+  margin-bottom: 1rem;
+} 
+
+
+.header-btn-container{
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  border: 2px solid #11a497;
+  border-radius: 12px;
+}
+
+.btn:hover{
+  color: darkgray;
+}
 
 
 
