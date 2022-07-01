@@ -4,14 +4,18 @@ import axios from 'axios';
 import './App.css';
 import Coin from './Coin'
 import Header from './components/Header'
+import TrendingBox from './components/TrendingBox';
 
 
 // https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=100&page=1&sparkline=false
 
 function App() {
+
+  // coin state
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
 
+  // coin fetch api using axios. Fetching coin data
   useEffect(() => {
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=100&page=1&sparkline=false')
       .then(res => {
@@ -31,15 +35,32 @@ const filteredCoins = coins.filter(coin =>
   ) //filter through the coins state variable specified above
   // 
 
-  return (
-  
-    
 
+
+
+// Trending
+
+  const [trending, setTrending] = useState([]);
+
+  useEffect(() => {
+    axios.get('https://api.coingecko.com/api/v3/search/trending')
+      .then(res => {
+          setTrending(res.data.coins);
+      })
+      .catch(err => console.error(err))
+  }, []);
+
+
+console.log(trending)
+
+
+
+
+  return (
 // start
 <div className="coin-app">
-
     <Header />
-
+    <TrendingBox trending={trending}/>
 
       <div className='coin-search'>
         <h1 className='coin-text'>Search a currency</h1>
