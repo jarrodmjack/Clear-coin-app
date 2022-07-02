@@ -10,6 +10,11 @@
 }
 
 
+.currency-name-title:hover{
+    color: rgb(89, 183, 183);
+    cursor: pointer;
+}
+
 
 .coin-row {
     display: flex;
@@ -20,6 +25,8 @@
     border-bottom: 1px solid #d7d7d7;
     width: 900px;
 }
+
+
 
 
 .coin {
@@ -70,6 +77,8 @@
 .coin-percent {
     width: 80px;
 }
+
+
 
 .red{
     color: #f00606;
