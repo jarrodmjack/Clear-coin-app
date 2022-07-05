@@ -10,6 +10,8 @@ import TrustedExchangeBox from './components/TrustedExchangeBox';
 import GlobalCurrencyData from './components/GlobalCurrencyData';
 import AboutUs from './components/AboutUs';
 import Portfolio from './components/Portfolio';
+import NewsPage from './components/NewsPage';
+import NewsApi from './components/NewsApi';
 
 
 // https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=100&page=1&sparkline=false
@@ -192,8 +194,9 @@ function App() {
           />
 
           <Route path='/about' element={<AboutUs />} />
-          <Route path ='/portfolio' element={<Portfolio chartData={coins} />} />
-
+          <Route path='/portfolio' element={<Portfolio chartData={coins} />} />
+          <Route path='/news' element={<NewsApi />}/>
+          
         </Routes>
 
       </div>
