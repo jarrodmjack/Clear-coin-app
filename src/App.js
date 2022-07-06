@@ -25,6 +25,7 @@ function App() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
 
+
   // coin fetch api using axios. Fetching coin data
   useEffect(() => {
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=100&page=1&sparkline=false')
@@ -76,38 +77,6 @@ function App() {
 
 
 
-
-  // FETCH CRYPTO NEWS *********
-
-  // const [news, setNews] = useState([])
-
-  // const options = {
-  //   method: 'GET',
-  //   url: 'https://last-crypto-news.p.rapidapi.com/cryptonews',
-  //   headers: {
-  //     'X-RapidAPI-Key': 'db3e8ae18bmshd7bb610557d438fp1e9721jsneadf0cccb21c',
-  //     'X-RapidAPI-Host': 'last-crypto-news.p.rapidapi.com'
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   // axios.get('https://crypto-news-live3.p.rapidapi.com/news')
-  //   axios.request(options).then(function (response) {
-  //     // console.log();
-  //     setNews(response.data.slice(0, 3))
-  //   }).catch(function (error) {
-  //     console.error(error);
-  //   });
-  // }, []);
-
-  // console.log(news)
-
-
-
-
-
-
-
   const [globalCurrencyData, setGlobalCurrencyData] = useState([]);
   const [globalMcapPercentage, setGlobalMcapPercentage] = useState([]);
 
@@ -151,52 +120,65 @@ function App() {
 
         <Header />
         <Routes>
-          <Route path='/' element ={ // HOME PAGE ROUTE
+          <Route path='/' element={ // HOME PAGE ROUTE
             <>
-            <GlobalCurrencyData globalMcapPercentage={globalMcapPercentage} globalCurrencyData={globalCurrencyData} />
-          <div className='triple-box-container'>
-            <div className='triple-box-styling'>
-              <h2 className='triple-box-title'>Trending</h2>
-              <TrendingBox trending={trending} />
-            </div>
-            <div className='triple-box-styling'>
-              <h2 className='triple-box-title'>Top Exchanges</h2>
-              <TrustedExchangeBox trustedExchanges={trustedExchanges} />
-            </div>
-            <div className='triple-box-styling'>
-              <h2 className='triple-box-title'>Current News</h2>
+              <GlobalCurrencyData globalMcapPercentage={globalMcapPercentage} globalCurrencyData={globalCurrencyData} />
+              <div className='triple-box-container'>
+                <div className='triple-box-styling'>
+                  <h2 className='triple-box-title'>Trending</h2>
+                  <TrendingBox trending={trending} />
+                </div>
+                <div className='triple-box-styling'>
+                  <h2 className='triple-box-title'>Top Exchanges</h2>
+                  <TrustedExchangeBox trustedExchanges={trustedExchanges} />
+                </div>
+                <div className='triple-box-styling'>
+                  <h2 className='triple-box-title'></h2>
 
-            </div>
-          </div>
-          <div className='coin-search'>
-            <h1 className='coin-text'>Search a currency</h1>
-            <form>
-              <input type='text' placeholder="Search a currency" className='coin-input' onChange={handleChange}></input>
-            </form>
-          </div>
-
-          {filteredCoins.map(coin => {
-            return (
-              <Coin
-                key={coin.id}
-                name={coin.name}
-                image={coin.image}
-                symbol={coin.symbol}
-                marketcap={coin.market_cap}
-                price={coin.current_price}
-                priceChange={coin.price_change_percentage_24h}
-                volume={coin.total_volume}
-              />
-            )
-          })}
+                </div>
+              </div>
+              <div className='coin-search'>
+                <h1 className='coin-text'>Search a currency</h1>
+                <form>
+                  <input type='text' placeholder="Search a currency" className='coin-input' onChange={handleChange}></input>
+                </form>
+              </div>
+              <div className='coin-table-container'>
+                <div className='coin-table-headers-container'>
+                  {/* <div className='coin-table-header-1'> */}
+                  <h2 className='coin-table-header'>Currency</h2>
+                  <h2 className='coin-table-header'>Symbol</h2>
+                  <h2 className='coin-table-header'>Price(CAD)</h2>
+                  {/* </div> */}
+                  {/* <div className='coin-table-header-2'> */}
+                  <h2 className='coin-table-header volume-header'>24hr Volume</h2>
+                  <h2 className='coin-table-header perc-change-header'>24hr Change</h2>
+                  <h2 className='coin-table-header mcap-header'>Market Cap</h2>
+                  {/* </div> */}
+                </div>
+                {filteredCoins.map(coin => {
+                  return (
+                    <Coin
+                      key={coin.id}
+                      name={coin.name}
+                      image={coin.image}
+                      symbol={coin.symbol}
+                      marketcap={coin.market_cap}
+                      price={coin.current_price}
+                      priceChange={coin.price_change_percentage_24h}
+                      volume={coin.total_volume}
+                    />
+                  )
+                })}
+              </div>
             </>
           }
           />
 
           <Route path='/about' element={<AboutUs />} />
           <Route path='/portfolio' element={<Portfolio chartData={coins} />} />
-          <Route path='/news' element={<NewsApi />}/>
-          
+          <Route path='/news' element={<NewsApi newsSearch={search} />} />
+
         </Routes>
 
       </div>

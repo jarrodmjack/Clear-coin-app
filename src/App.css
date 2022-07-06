@@ -213,6 +213,90 @@ h1{
 
 
 
+/* NEWS PAGE */
+
+.news-box-container {
+  /* display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px; */
+  margin-top: 50px;
+  display: grid;
+  /* grid-template-columns: 350px 300px; */
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 20px;
+
+}
+
+
+.current-news-title {
+  margin-bottom: 30px;
+}
+
+.news-box-container:nth-child(4n) {
+  flex-basis: 100%;
+}
+
+.news-title-thumb-container {
+  display: flex;
+  align-items: center;
+}
+
+.news-box-style {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: ; */
+  height: 350px;
+  width: 350px;
+  -webkit-box-shadow: 0px 3px 15px 4px #000000; 
+box-shadow: 0px 3px 15px 4px #000000;
+transform: translateZ(0);
+}
+
+.news-box-style:hover{
+  cursor: pointer;
+  opacity: .6;
+  transition: ease-in;
+  transform: translateX(-5px) translateY(-5px) translateZ(20px);
+  
+}
+
+
+.provider-date-container{
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+  justify-content: space-between;
+}
+
+.news-thumb{
+  align-self: center;
+}
+
+.provider-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.news-provider-logo{
+  height: 25px;
+  width: 25px;
+}
+
+
+.news-date{
+  font-size: 12px;
+}
+
+
+
+
+
+
+
 
 
 
