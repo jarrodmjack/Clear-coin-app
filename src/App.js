@@ -24,7 +24,10 @@ function App() {
   // coin state
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
+  
+  const newsCoins = [];
 
+  coins.map(item => newsCoins.push(item.name))
 
   // coin fetch api using axios. Fetching coin data
   useEffect(() => {
@@ -32,6 +35,7 @@ function App() {
       .then(res => {
         setCoins(res.data); //set the coins state
         console.log(res.data);
+        // newsCoins.push()
       })
       .catch(err => console.error(err))
   }, []);
@@ -177,7 +181,7 @@ function App() {
 
           <Route path='/about' element={<AboutUs />} />
           <Route path='/portfolio' element={<Portfolio chartData={coins} />} />
-          <Route path='/news' element={<NewsApi newsSearch={search} />} />
+          <Route path='/news' element={<NewsApi newsCoinsArr={newsCoins}newsSearch={search} />} />
 
         </Routes>
 

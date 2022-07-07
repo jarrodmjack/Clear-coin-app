@@ -263,6 +263,9 @@ transform: translateZ(0);
   
 }
 
+.news-description-font-fix{
+  font-size: 14px;
+}
 
 .provider-date-container{
   display: flex;
@@ -290,6 +293,63 @@ transform: translateZ(0);
 .news-date{
   font-size: 12px;
 }
+
+
+
+/* DROPDOWN MENU ON NEWS PAGE */
+
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown-link{
+  background-color: rgb(44, 45, 45);
+  border: 1px solid gray;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  max-height:250px;/* you can change as you need it */
+  overflow:auto;
+}
+
+.dropdown-content a {
+  color: rgb(241, 241, 241);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(123, 116, 116);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+
+
+
+
+
+
+
 
 
 
