@@ -129,7 +129,7 @@ function App() {
               <GlobalCurrencyData globalMcapPercentage={globalMcapPercentage} globalCurrencyData={globalCurrencyData} />
               <div className='triple-box-container'>
                 <div className='triple-box-styling'>
-                  <h2 className='triple-box-title'>Trending</h2>
+                  <h2 className='triple-box-title'>Trending Currencies</h2>
                   <TrendingBox trending={trending} />
                 </div>
                 <div className='triple-box-styling'>
@@ -148,6 +148,7 @@ function App() {
                 </form>
               </div>
               <div className='coin-table-container'>
+                <button>Sort By </button>
                 <div className='coin-table-headers-container'>
                   {/* <div className='coin-table-header-1'> */}
                   <h2 className='coin-table-header'>Currency</h2>
@@ -175,13 +176,15 @@ function App() {
                   )
                 })}
               </div>
+              
+              {/* <NewsApi newsCoinsArr={newsCoins} newsSearch={search} /> */}
             </>
           }
           />
 
           <Route path='/about' element={<AboutUs />} />
           <Route path='/portfolio' element={<Portfolio chartData={coins} />} />
-          <Route path='/news' element={<NewsApi newsCoinsArr={newsCoins}newsSearch={search} />} />
+          <Route path='/news' element={<NewsApi newsCoinsArr={newsCoins} newsSearch={search} />} />
 
         </Routes>
 

@@ -1,5 +1,7 @@
 import React from 'react'
 import './Coin.css'
+import { FaCaretDown } from 'react-icons/fa'
+import { FaCaretUp } from 'react-icons/fa'
 
 const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap }) => {
     return (
@@ -14,9 +16,9 @@ const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap }) =>
                     <p className='coin-price'>${price}</p>
                     <p className='coin-volume'>${volume.toLocaleString()}</p>
                     {priceChange < 0 ? (
-                    <p className='coin-percent red'>{priceChange.toFixed(2)}%</p>
+                    <p className='coin-percent red'><FaCaretDown />{priceChange.toFixed(2)}%</p>
                     ) : (
-                        <p className='coin-percent green'>{priceChange.toFixed(2)}%</p>
+                        <p className='coin-percent green'><FaCaretUp />{priceChange.toFixed(2)}%</p>
                     )}
                     <p className='coin-marketcap'>
                         ${marketcap.toLocaleString()}
