@@ -5,7 +5,7 @@
 <hr>
 
 
-<b>Clearcoin Cypto</b>
+<b><h1>Clearcoin Cypto</h1></b>
 
 
 
