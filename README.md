@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+<hr>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src='https://phantom-marca.unidadeditorial.es/d6811174d250534bc39d0fd0920eec14/crop/0x0/887x499/resize/1320/f/jpg/assets/multimedia/imagenes/2022/03/10/16469298673188.png'></img>
 
-## Available Scripts
+<hr>
 
-In the project directory, you can run:
 
-### `npm start`
+<b>Clearcoin Cypto</b>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This is a full-stack crypto price-tracking application.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Link to project: TBD...
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Tech used: ReactJS, Node.js, MongoDB, JSX, API's from multiple different sources, including Coingecko and RapidAPI.
 
-## Learn More
+To begin this project, I started by using axios (Node module) to fetch my main cryptocurrency price tracker API from Coingecko. Coingecko is one of the largest Crypto price tracking applications in the world, with dozens of available API's (PS. Thanks coingecko!!!). I then created my main coin component and rendered all of the data I was receiving from coingecko, I used JSX to dynamically display this information and used my own lightweight CSS to style everything. Once the main section was done, I moved to the trending sections above, in which another call is made to a separate API from coingecko listing the trending currencies and exchanges. My next big step was to create my news component/page. I am using rapidAPI's bing search API to gather all relevant news related to the users cryptocurrency of choice (I made a drop down menu with the top 100 currencies that the user can pick from) and this page displays the news in a nice grid format. After that, I did the portfolio section using Apex Charts and allowed the useer to pick currencies and add them to their balance and track the price of their portfolio using the chart. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Lessons Learned: So far, I would  say I would like to lessen the amount of API calls I am making, as I think that definitely makes the application less accessible to users with a slower internet connection. I think this can be acheived by refactoring some parts of my code, which I will be doing as I want this application to be as accessible as possible to as many users as possible.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Also check out a couple of my other projects:
 
-### Code Splitting
+100 notes: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+World of Warcraft Item-finder: https://github.com/jarrodmjack/World-Of-WarCraft-Item-Finder
