@@ -122,7 +122,7 @@ function App() {
     <Router>
       <div className="coin-app">
 
-        <Header />
+        <Header  />
         <Routes>
           <Route path='/' element={ // HOME PAGE ROUTE
             <>

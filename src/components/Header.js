@@ -1,19 +1,37 @@
 import { Button } from "./Button"
+import { Link } from "react-router-dom"
+
 
 
 const Header = () => {
-  return (
-    <header className="header-style">
-    <h1 className="title-text">ClearCoin.io</h1>
-    <div className='header-btn-container'>
-      
-    <Button btnText="News"/>
-    <Button btnText="Portfolio"/>
-    <Button btnText="Sign-in"/>
-    <Button btnText="About"/>
 
-    </div>
-  </header>
+  // const handle
+
+  return (
+
+    <header className="header-style">
+      <h1 className="title-text">ClearCoin.io</h1>
+      <div className='header-btn-container'>
+
+        <Link to="news">
+          <Button btnText="News" />
+        </Link>
+
+        <Link to="portfolio">
+          <Button btnText="Portfolio" />
+        </Link>
+
+        <Link to="/signin">
+          <Button btnText="Sign-in" />
+        </Link>
+
+        <Link to='/about'>
+          <Button btnText="About" />
+        </Link>
+
+
+      </div>
+    </header>
   )
 }
 

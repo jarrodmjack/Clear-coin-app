@@ -157,24 +157,7 @@ const NewsApi = ({ newsCoinsArr }) => {
                     </div>
                 ))}
             </div>
-            {/* <div className='news-box-container'>
-                {newsObj.map((article, index) => (
-                    <div key={index} className='news-box-style'>
-                        <div className='news-title-thumb-container'>
-                            <h3 className='news-title'><a href={article.url}>{article.title}</a></h3> <img className='news-thumb' src={article.image} alt={'news'}></img>
-                        </div>
-                        <p className='news-description'>{article.description.length > 250 ? article.description.slice(0, 250) : article.description}...</p>
-                        <div className='provider-date-container'>
-                            <div className='provider-container'>
-                                <img className='news-provider-logo' src={article.providerImage} alt={'providername'}></img>
-                                <span>{article.providerName}</span>
-                            </div>
-
-                            <span className='news-date'>{article.datePublished.slice(0, 10)} {article.datePublished.slice(12, 19)}</span>
-                        </div>
-                    </div>
-                ))}
-            </div> */}
+           
         </div>
 
 
