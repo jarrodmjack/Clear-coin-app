@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 
@@ -45,7 +44,7 @@
   text-align: center;
 }
 
-.coin-input{
+.coin-input {
   padding-left: 16px;
   width: 300px;
   height: 50px;
@@ -53,13 +52,13 @@
   border: none;
   /* border-bottom: 1px solid cyan; */
   /* border: 2px solid gray;  */
-   background-image: linear-gradient(-225deg, #386a78 0%, #325454 48%, #508a88 100%);
+  background-image: linear-gradient(20deg, #02030366 0%, #21d8f06c 48%, #00000058 100%);
   color: #e2e2e2;
 
 }
 
 
-.coin-input::placeholder{
+.coin-input::placeholder {
   color: #e2e2e2;
   /* padding-left: 1rem; */
   /* text-align: center; */
@@ -94,12 +93,20 @@
 /* HEADER */
 
 
-h1{
+h1 {
   font-size: 24px;
 }
 
+h1.title-text:hover {
+  color: rgb(55, 172, 172);
+}
 
-.header-style{
+a{
+  text-decoration: none;
+}
+
+
+.header-style {
   height: 100px;
   width: 100%;
   display: flex;
@@ -108,10 +115,10 @@ h1{
   padding: 0rem 10rem;
   border-bottom: 2px solid rgb(65, 64, 64);
   margin-bottom: 1rem;
-} 
+}
 
 
-.header-btn-container{
+.header-btn-container {
   display: flex;
   gap: 15px;
 }
@@ -120,12 +127,14 @@ h1{
   color: white;
   text-decoration: none;
   padding: 1rem;
-  border: 2px solid #11a497;
+  border: 2px solid #278195;
   border-radius: 12px;
 }
 
 .btn:hover{
-  color: darkgray;
+  border: 2px solid rgb(80, 191, 196);
+  /* background-color: rgb(36, 23, 41); */
+  transition: ease .3s;
   cursor: pointer;
 }
 
@@ -133,13 +142,13 @@ h1{
 
 /* TRIPLE BOX */
 
-.triple-box-title{
+.triple-box-title {
   font-size: 20px;
 }
 
 
 
-.triple-box-container{
+.triple-box-container {
   display: flex;
   gap: 30px;
   margin: 3rem;
@@ -148,19 +157,19 @@ h1{
 
 .triple-box-styling {
   border: 7px solid rgb(47, 45, 45);
-  text-align: center  ;
+  text-align: center;
   border-radius: 12px;
   padding: 1rem;
   width: 450px;
   height: 275px;
-  outline: 2px solid rgb(108, 192, 192);
+  outline: 2px solid rgb(44, 181, 184);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
 .trusted-img-center-fix,
-.trending-img-center-fix{
+.trending-img-center-fix {
   font-size: 14px;
   display: flex;
   justify-content: flex-start;
@@ -169,7 +178,7 @@ h1{
 }
 
 .trusted-box-container,
-.trending-box-container{
+.trending-box-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -197,7 +206,7 @@ h1{
   gap: 5px;
 }
 
-.todays-crypto-title{
+.todays-crypto-title {
   font-size: 26px;
 }
 
@@ -250,31 +259,31 @@ h1{
   /* border: ; */
   height: 350px;
   width: 350px;
-  -webkit-box-shadow: 0px 3px 15px 4px #000000; 
-box-shadow: 0px 3px 15px 4px #000000;
-transform: translateZ(0);
+  -webkit-box-shadow: 0px 3px 15px 4px #000000;
+  box-shadow: 0px 3px 15px 4px #000000;
+  transform: translateZ(0);
 }
 
-.news-box-style:hover{
+.news-box-style:hover {
   cursor: pointer;
   opacity: .6;
   transition: ease-in;
   transform: translateX(-5px) translateY(-5px) translateZ(20px);
-  
+
 }
 
-.news-description-font-fix{
+.news-description-font-fix {
   font-size: 14px;
 }
 
-.provider-date-container{
+.provider-date-container {
   display: flex;
   align-items: center;
   /* gap: 10px; */
   justify-content: space-between;
 }
 
-.news-thumb{
+.news-thumb {
   align-self: center;
   height: 100px;
   width: 100px;
@@ -286,13 +295,13 @@ transform: translateZ(0);
   gap: 10px;
 }
 
-.news-provider-logo{
+.news-provider-logo {
   height: 25px;
   width: 25px;
 }
 
 
-.news-date{
+.news-date {
   font-size: 12px;
 }
 
@@ -309,7 +318,7 @@ transform: translateZ(0);
   border: none;
 }
 
-.dropdown-link{
+.dropdown-link {
   background-color: rgb(44, 45, 45);
   border: 1px solid gray;
 }
@@ -324,10 +333,11 @@ transform: translateZ(0);
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  max-height:250px;/* you can change as you need it */
-  overflow:auto;
+  max-height: 250px;
+  /* you can change as you need it */
+  overflow: auto;
 }
 
 .dropdown-content a {
@@ -337,19 +347,33 @@ transform: translateZ(0);
   display: block;
 }
 
-.dropdown-content a:hover {background-color: rgb(123, 116, 116);}
+.dropdown-content a:hover {
+  background-color: rgb(123, 116, 116);
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-
-
-
-
-
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
 
 
+
+ /* About */
+
+
+ .about-img {
+  height: 400px;
+  width: 750px;
+ }
+
+
+ .about-body {
+ width: 1000px;
+ border: 1px solid red;
+ }
 
 
 
@@ -404,7 +428,3 @@ transform: translateZ(0);
 }
 
  */
-
-
-
-

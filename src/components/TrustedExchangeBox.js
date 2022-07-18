@@ -1,6 +1,7 @@
 import Image from "./Image"
 
 
+
 const TrustedExchangeBox = ({ trustedExchanges }) => {
   return (
     <>

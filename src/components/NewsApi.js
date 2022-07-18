@@ -121,6 +121,7 @@ const NewsApi = ({ newsCoinsArr }) => {
 
     return (
         <div>
+            <Header  />
             <h1 className='current-news-title'>Current News</h1>
 
             {/* this is a dropdown menu on the news page that contains all of the top 100 coin names to be searched */}

@@ -10,14 +10,16 @@ const Header = () => {
   return (
 
     <header className="header-style">
-      <h1 className="title-text">ClearCoin.io</h1>
+      <Link to='/home'>
+        <h1 className="title-text">ClearCoin.io</h1>
+      </Link>
       <div className='header-btn-container'>
 
-        <Link to="news">
+        <Link to="/news">
           <Button btnText="News" />
         </Link>
 
-        <Link to="portfolio">
+        <Link to="/portfolio">
           <Button btnText="Portfolio" />
         </Link>
 

@@ -10,8 +10,9 @@ import TrustedExchangeBox from './components/TrustedExchangeBox';
 import GlobalCurrencyData from './components/GlobalCurrencyData';
 import AboutUs from './components/AboutUs';
 import Portfolio from './components/Portfolio';
-import NewsPage from './components/NewsPage';
+// import NewsPage from './components/NewsPage';
 import NewsApi from './components/NewsApi';
+import LandingPage from './components/LandingPage';
 
 
 // https://api.coingecko.com/api/v3/coins/markets?vs_currency=cad&order=market_cap_desc&per_page=100&page=1&sparkline=false
@@ -122,10 +123,14 @@ function App() {
     <Router>
       <div className="coin-app">
 
-        <Header  />
+
         <Routes>
-          <Route path='/' element={ // HOME PAGE ROUTE
+
+        <Route path='/' element={<LandingPage />} />
+
+          <Route path='/home' element={ // HOME PAGE ROUTE
             <>
+            <Header  />
               <GlobalCurrencyData globalMcapPercentage={globalMcapPercentage} globalCurrencyData={globalCurrencyData} />
               <div className='triple-box-container'>
                 <div className='triple-box-styling'>
