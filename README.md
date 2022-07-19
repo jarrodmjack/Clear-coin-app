@@ -29,6 +29,6 @@ Lessons Learned: So far, I would  say I would like to lessen the amount of API c
 
 Also check out a couple of my other projects:
 
-100 notes: 
+100 notes: https://github.com/jarrodmjack/100notes
 
-World of Warcraft Item-finder: https://github.com/jarrodmjack/World-Of-WarCraft-Item-Finder
+Country info Database: https://github.com/jarrodmjack/country-api
