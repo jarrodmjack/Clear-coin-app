@@ -53,7 +53,7 @@ class PortfolioChart extends Component {
                     foreColor: 'white'
                 },
                 xaxis: {
-                    catgories: ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix', 'Philadelphia', 'San Antonio', 'San Diego', 'Dallas', 'San Jose']
+                    catgories: chartNameArr
                 },
                 plotOptions: {
                     bar: {
@@ -64,7 +64,7 @@ class PortfolioChart extends Component {
                     colors: ['#f44f36']
                 },
                 dataLabels: { // labels on bars
-                    enabled: false
+                    enabled: true
                 },
                 title: { //chart title
                     text: 'Current Asset Price',
@@ -76,10 +76,10 @@ class PortfolioChart extends Component {
                     }
                 }
             },
-            series: [{
-                name: 'Population',
+            series1: [{
+                name: 'Price(CAD)',
                 data: chartPriceArr
-            }]
+            }],
         }
 
         
@@ -108,8 +108,8 @@ class PortfolioChart extends Component {
             <>
                 <Chart
                     options={this.state.options}
-                    series={this.state.series}
-                    type="bar"
+                    series={this.state.series1}
+                    type="line"
                     height="450"
                     width="800"
                 />

@@ -141,10 +141,10 @@ function App() {
                   <h2 className='triple-box-title'>Top Exchanges</h2>
                   <TrustedExchangeBox trustedExchanges={trustedExchanges} />
                 </div>
-                <div className='triple-box-styling'>
+                {/* <div className='triple-box-styling'>
                   <h2 className='triple-box-title'></h2>
 
-                </div>
+                </div> */}
               </div>
               <div className='coin-search'>
                 <h1 className='coin-text'>Search a currency</h1>

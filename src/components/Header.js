@@ -15,6 +15,9 @@ const Header = () => {
       </Link>
       <div className='header-btn-container'>
 
+      <Link to='/home'>
+      <Button btnText="Home" />
+      </Link>
         <Link to="/news">
           <Button btnText="News" />
         </Link>
