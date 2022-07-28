@@ -16,7 +16,7 @@ This is a full-stack crypto price-tracking application.
 
 
 
-Link to project: TBD...
+Link to Demo: https://clearcoincrypto.netlify.app/
 
 
 
